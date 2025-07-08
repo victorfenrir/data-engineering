@@ -28,14 +28,6 @@ In case you have lost refence to the existing containers, it is possible to forc
 docker container kill $(docker container ls -q)
 ```
 
-#### Setup directory permissions
-
-```
-chmod -R 777 airflow/
-chmod -R 777 spark/
-chmod +x scripts/update_hive_metastore.sh
-```
-
 #### Initial setup of the data catalog
 
 ```
@@ -58,11 +50,9 @@ http://localhost:8081
 
 Apache Superset UI
 http://localhost:8088
+```
 
-==================================
 END OF PROJECT INITIATIZATION
-==================================
-
 
 ## Project configurations
 
@@ -119,4 +109,12 @@ beeline -u jdbc:hive2://spark-thrift-server:10000
 show schemas;
 show tables in default;
 show tables in marts;
+```
+
+#### Setup directory permissions
+
+```
+chmod -R 777 airflow/
+chmod -R 777 spark/
+chmod +x scripts/update_hive_metastore.sh
 ```
