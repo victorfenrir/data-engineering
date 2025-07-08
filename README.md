@@ -8,7 +8,6 @@ Before getting started, you will need to install the following software on your 
 
 * [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)  
 * [Docker Desktop](https://www.docker.com/products/docker-desktop/)  
-* [Python 3.10](https://www.python.org/downloads/)  
 * [VSCode](https://code.visualstudio.com/)
 
 Since the installation process depends on your operating system, you’ll need to handle this part on your own.
@@ -28,6 +27,11 @@ Next, clone your forked project:
 ```
 git clone <<your-repository-url>>
 ```
+
+To get your project URL, go to the GitHub repository you just forked (in your GitHub account) and copy the following address (HTTPS):
+
+<img src="images/git-clone.png" width="400">
+
 
 ## Starting the project
 
