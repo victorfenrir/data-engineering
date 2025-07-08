@@ -1,10 +1,41 @@
+# Data Engineering 
+
+Welcome to the data engineering project!
+
+## Prerequisites
+
+Before getting started, you will need to install the following software on your machine:
+
+* [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)  
+* [Docker Desktop](https://www.docker.com/products/docker-desktop/)  
+* [Python 3.10](https://www.python.org/downloads/)  
+* [VSCode](https://code.visualstudio.com/)
+
+Since the installation process depends on your operating system, you’ll need to handle this part on your own.
+
+You also need to create a GitHub account to follow along with the project. Create your account at [https://github.com/](https://github.com/).
+
+## Cloning the Project Repository
+
+First, you need to access the original project repository at https://github.com/weslleymoura/data-engineering and create a **fork**. This will make a copy of the project in your own GitHub account (as a new repository).
+
+<img src="images/git-fork.png" width="400">
+
+**After forking**, open your terminal and navigate to the **directory where you want to save the project** (throughout the project, we will refer to this directory as the **working dir**).
+
+Next, clone your forked project:
+
+```
+git clone <<your-repository-url>>
+```
+
 ## Starting the project
 
 Please, execute the following commands to initiate the project.
 
 #### Working directory
 
-Before you start, make sure you are inside the project directory.
+Before you start, make sure you are inside the project directory (data-engineering).
 
 #### Build all services
 
@@ -109,12 +140,4 @@ beeline -u jdbc:hive2://spark-thrift-server:10000
 show schemas;
 show tables in default;
 show tables in marts;
-```
-
-#### Setup directory permissions
-
-```
-chmod -R 777 airflow/
-chmod -R 777 spark/
-chmod +x scripts/update_hive_metastore.sh
 ```
