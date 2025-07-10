@@ -11,7 +11,7 @@ Before getting started, you will need to install the following software on your 
 * [VSCode](https://code.visualstudio.com/)
 
 Since the installation process depends on your operating system, you’ll need to handle this part on your own.
-However, I've added some guidance for [Windows](./_support/windows.md) and [macOS](./_support/macos.md).
+However, I've added some guidance for [Windows](./_support/windows.md), [macOS](./_support/macos.md) and [Ubuntu](./_support/ubuntu.md).
 
 You also need to create a GitHub account to follow along with the project. Create your account at [https://github.com/](https://github.com/).
 
