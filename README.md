@@ -50,20 +50,6 @@ Use the following command to build all services.
 docker-compose up -d --build
 ```
 
-ONLY FOR REFERENCE, DO NOT EXECUTE.
-
-You can use the following command to destroy all services.
-
-```
-docker-compose down --volumes --remove-orphans
-```
-
-In case you have lost refence to the existing containers, it is possible to force a shut down.
-
-```
-docker container kill $(docker container ls -q)
-```
-
 #### Initial setup of the data catalog
 
 ```
@@ -88,11 +74,9 @@ Apache Superset UI
 http://localhost:8088
 ```
 
-END OF PROJECT INITIATIZATION
+## Notes for project configurations (no need to execute anything)
 
-## Project configurations
-
-Please, take note of the following project configurations (no need to execute anything).
+Please, take note of the following project configurations 
 
 #### Superset connection string
 
@@ -111,7 +95,7 @@ docker exec -it airflow bash -c "cd /dbt_lakehouse/target && python3 -m http.ser
 Check results at http://localhost:8091
 
 
-## Support commands
+## Support commands (run as needed)
 
 #### Access airflow container as root user.
 
@@ -145,4 +129,18 @@ beeline -u jdbc:hive2://spark-thrift-server:10000
 show schemas;
 show tables in default;
 show tables in marts;
+```
+
+#### Shutting down docker containers
+
+You can use the following command to destroy all services.
+
+```
+docker-compose down --volumes --remove-orphans
+```
+
+In case you have lost refence to the existing containers, it is possible to force a shut down.
+
+```
+docker container kill $(docker container ls -q)
 ```
