@@ -11,6 +11,7 @@ Before getting started, you will need to install the following software on your 
 * [VSCode](https://code.visualstudio.com/)
 
 Since the installation process depends on your operating system, you’ll need to handle this part on your own.
+However, I've added some guidance for [Windows](./_support/windows.md) and [macOS](./_support/macos.md).
 
 You also need to create a GitHub account to follow along with the project. Create your account at [https://github.com/](https://github.com/).
 
@@ -18,7 +19,7 @@ You also need to create a GitHub account to follow along with the project. Creat
 
 First, you need to access the original project repository at https://github.com/weslleymoura/data-engineering and create a **fork**. This will make a copy of the project in your own GitHub account (as a new repository).
 
-<img src="images/git-fork.png" width="400">
+<img src="_support/git-fork.png" width="400">
 
 **After forking**, open your terminal and navigate to the **directory where you want to save the project** (throughout the project, we will refer to this directory as the **working dir**).
 
@@ -30,7 +31,7 @@ git clone <<your-repository-url>>
 
 To get your project URL, go to the GitHub repository you just forked (in your GitHub account) and copy the following address (HTTPS):
 
-<img src="images/git-clone.png" width="400">
+<img src="_support/git-clone.png" width="400">
 
 
 ## Starting the project
