@@ -42,6 +42,15 @@ Please, execute the following commands to initiate the project.
 
 Before you start, make sure you are inside the project directory (data-engineering).
 
+#### Grant permissions
+
+Make sure you granted full access on Airflow and DBT folders
+
+```
+sudo chmod -R 777 airflow/
+sudo chmod -R 777 dbt_lakehouse/
+```
+
 #### Build all services
 
 Use the following command to build all services.
@@ -86,10 +95,18 @@ Use this connection string to connect Superset to the lakehouse.
 hive://spark-thrift-server:10000/default
 ```
 
+Once connected, you should be able to query the DBT table
+
+```
+SELECT SUM(total_amount) AS total_amount FROM marts.fct_summary
+```
+
+
+
 #### Initiating DBT Docs server
 
 ```
-docker exec -it airflow bash -c "cd /dbt_lakehouse/target && python3 -m http.server 8091"
+docker exec -it airflow bash -c "cd /home/airflow/dbt_lakehouse/target && python3 -m http.server 8091"
 ```
 
 Check results at http://localhost:8091
@@ -144,3 +161,21 @@ In case you have lost refence to the existing containers, it is possible to forc
 ```
 docker container kill $(docker container ls -q)
 ```
+
+#### Checking container logs
+
+In case you need to troubleshoot containers (e.g.: airflow logs)
+
+```
+docker logs airflow
+```
+
+
+#### Resolving permissions issue
+
+In case Airflow is failing because of permission issues.
+
+```
+sudo chmod -R 777 airflow/
+```
+
