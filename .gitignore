@@ -2,3 +2,4 @@ airflow/logs/*
 .ipynb_checkpoints
 .DS_Store
 logs/*
+spark/__pycache__/*
